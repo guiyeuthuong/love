@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Iu em lắm </title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; overflow: hidden; background: black; }
+    canvas { display: block; }
+    #loadingText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loadingText">Đang tải yêu thương...</div>
+
+<script src="https://cdn.jsdelivr.net/gh/dulieublog2/js@main/chukhonggian.js"></script>
+
+<script>
+const jansharenoidung = ["\"🥰Anh Yêu Em Mỹ Tâm iu à 💞💗💞\", \"🥰Em là cả thế giới của Anh 💕🌍🩷\",","      \"🥰Anh luôn phía sau em 💕🩷💞\", \"🥰Tình yêu của Anh dành cho Em là vô tận 💕🙃💞💖\",","      \"🥰Em là ánh sáng cuộc đời Anh✨☄️💫☀️\", \"🥰Yêu Em nhiều lắm Mỹ Tâm iu à🩷🙃💘💖💝\",","      \"🥰Mỗi ngày đều là ngày yêu Em 💞💕💘💐\", \"🥰Hạnh phúc là có Em bên cạnh 💞🩷💘💓\",","      \"🥰Em là điều tuyệt vời nhất 💖💝💘💓💝\", \"🥰Anh Yêu em nhiều lắm Mỹ Tâm iu ơi🩷💕💞\",","      \"🥰Anh yêu Em Mỹ Tâm🩷💕💞💖💓\", \"🥰Em là mối tình đầu quan trọng nhất của Anh🩷💕💞💘\",","      \"🥰Hãy luôn mạnh mẽ em nhé💪💪💪\", \"🥰Anh luôn ở cạnh em💓💘🩷💞💕\",","      \"🥰Anh luôn ở phía sau em mỗi khi em cần💙🩵💚💛\",","      \"🥰Em luôn mỉm cười và luôn yêu đời em nhé🩷💕💞💘\",","      \"🥰Chỉ yêu mỗi mình em Mỹ Tâm iu💛🩷💕💞\", \"🥰Anh yêu Em nhiều lắm cục cưng à 💖\",","      \"🥰Anh mãi iu iu em nhiều 🩷😘💞💕\", \"🥰Anh sẽ mãi iu em Mỹ Tâm 💞🩷💕🥰💘\",","      \"🥰Anh luôn bên cạnh em bé iu à 🩵💛🩷💕\", \"🥰Anh yêu Em Mỹ Tâm 🩷💞💕💓💘💓\",","      \"🥰Em phải thật mạnh mẽ nhé 💪💪💪\", \"🥰Em là cả bầu trời của Anh ☄️✨💫\",","      \"🥰Iu vợ tương lai lắm 💞🩷💕💍\", \"🥺Mệt mỏi thì phải dừng lại⛔ nghỉ ngơi😴 nhé em iu 🥺🥺🥺\",","      \"💞🩷💕Yêu Em 💗💖🩷💞\", \"🥰Chỉ yêu mình Em Mỹ Tâm iu 😍🩷💞💖🥰\""];
+const imageUrls = [ 'https://raw.githubusercontent.com/guiyeuthuong/love/main/uploads/1749220378505_1000002145.jpg' ];
+</script>
+
+<audio id="phatnhac" autoplay muted>
+  <source src="https://nguoiyeucuatoi.github.io/love/onlylove.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    const audio = document.getElementById('phatnhac');
+    audio.muted = false;
+    audio.play();
+  }, { once: true }); 
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/nguoiyeucuatoi/love@main/chuchayjanshare2.js"></script>
+</body>
+</html>
