@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>sinh nhật vui vẽ</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; overflow: hidden; background: black; }
+    canvas { display: block; }
+    #loadingText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loadingText">Đang tải yêu thương...</div>
+
+<script src="https://cdn.jsdelivr.net/gh/dulieublog2/js@main/chukhonggian.js"></script>
+
+<script>
+const jansharenoidung = [" Chúc mày có một sinh nhật vui vẻ, tuổi mới thật nhiều niềm vui, sức khỏe và luôn thành công trong cuộc sống!","","Sinh nhật vui vẻ nhé, bạn tôi! Chúc bạn có một ngày tràn ngập tiếng cười, hạnh phúc và những điều tuyệt vời nhất!","","Happy Birthday! Chúc mày luôn xinh đẹp, mạnh khỏe và ngày càng thành công hơn trong cuộc sống! Hãy tận hưởng ngày đặc biệt của mình nhé!","","Chúc mừng sinh nhật! Mong rằng tất cả ước mơ của bạn sẽ trở thành hiện thực. Chúc bạn luôn vui vẻ, bình an và hạnh phúc!",""," Sinh nhật vui vẻ! Chúc bạn một năm mới tràn đầy may mắn, cơ hội mới và thật nhiều thành công trong sự nghiệp!"];
+const imageUrls = [ '' ];
+</script>
+
+<audio id="phatnhac" autoplay muted>
+  <source src="https://nguoiyeucuatoi.github.io/love/onlylove.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    const audio = document.getElementById('phatnhac');
+    audio.muted = false;
+    audio.play();
+  }, { once: true }); 
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/nguoiyeucuatoi/love@main/chuchayjanshare2.js"></script>
+</body>
+</html>
