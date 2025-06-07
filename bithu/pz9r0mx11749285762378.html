@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOVE 😘</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/guiyeuthuong/love@main/bithu2.css">
+</head>
+<body>
+<span style="font-family: Lobster;"></span>
+<span style="font-family: fontjan23;"></span>
+
+<textarea  id="noidung" type="text"  placeholder="Nhập thông điệp" style="display:none;">Cảm ơn em đã đến bên anh, khi anh tay trắng tương lai chưa hoàn thành</textarea>
+
+<input class="janform-field" type="hidden" id="chuky" value="Hướng" placeholder="Nhập tên " style="width:100%;" >
+<input class="janform-field" type="hidden" id="linkanh" value="https://raw.githubusercontent.com/guiyeuthuong/love/main/uploads/1749272940737_couple-love-with-cute-cartoon-illustration-couple_752903-21.jpg" placeholder="Nhập tên " style="width:100%;" >
+
+
+
+  <span style="font-family: Pacifico, cursive;">
+    <div class="button" id="dongthu">Đóng thư</div>
+    <div class="boicanh" id="boicanh">
+      <div id="perspective">
+        <div id="bithu" style="transform: rotateX(0deg) rotateY(0deg) scale(1.4);">
+          <div class="mat truoc">
+            <div id="white">
+              <h1><span style="font-family: Lobster;">LOVE 😘<br>---</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </span>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/guiyeuthuong/love@main/bithu2.js"></script>
+<audio id="phatnhac" autoplay muted>
+  <source src="https://nguoiyeucuatoi.github.io/love/onlylove.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    const audio = document.getElementById('phatnhac');
+    audio.muted = false;
+    audio.play();
+  }, { once: true }); 
+</script>
+<script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.top = '-10px';
+    heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  setInterval(createHeart, 100);
+</script>
+
+</body>
+</html>
