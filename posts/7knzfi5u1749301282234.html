@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; overflow: hidden; background: black; }
+    canvas { display: block; }
+    #loadingText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loadingText">Đang tải yêu thương...</div>
+
+<script src="https://cdn.jsdelivr.net/gh/dulieublog2/js@main/chukhonggian.js"></script>
+
+<script>
+const jansharenoidung = ["Gửi em rể: Nguyễn Đức Quang","Chị xin nói với em như sau🥰","1: em nhớ phải yêu thương Duyên nhé , ko thì em sẽ bị cj đây tung lên mạng với tư cách một đứa za trưởng 🌹","2: em làm ai dỗi cx đc nhưng nhớ dỗ duyên em nhé EM NHÉ📢","3: em dỗi cj thì cj cx ko dỗ đâu. Nên là em ko chịu ko chịu thì thôi🙂‍↔️","4: nhớ 5 điều bác Hồ dạy nhé em","5: em làm gì kệ em, đừng làm duyên cáu vì duyên cáu lại bảo tại cj nhé em🥲","Xin hết📢"];
+const imageUrls = [ '' ];
+</script>
+
+<audio id="phatnhac" autoplay muted>
+  <source src="https://nguoiyeucuatoi.github.io/love/onlylove.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    const audio = document.getElementById('phatnhac');
+    audio.muted = false;
+    audio.play();
+  }, { once: true }); 
+</script>
+
+<script src="https://cdn.jsdelivr.net/gh/nguoiyeucuatoi/love@main/chuchayjanshare2.js"></script>
+</body>
+</html>
