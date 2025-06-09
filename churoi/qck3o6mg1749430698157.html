@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; overflow: hidden; background: black; }
+    canvas { display: block; }
+    #loadingText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      font-family: 'Roboto', sans-serif;
+      z-index: 1;
+    }
+  #muteButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4081;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: none;
+  }
+</style>
+
+</head>
+<body>
+
+<div id="loadingText">Đang tải yêu thương...</div>
+
+<script src="https://cdn.jsdelivr.net/gh/dulieublog2/js@main/chukhonggian.js"></script>
+
+<script>
+const jansharenoidung = ["Yêu em nhiều lắm "," Luôn nhớ em "," Em là tất cả Yêu em "," Bên em là đủ Anh cần em "," Vì em anh tồn tại "," Em là định mệnh "," Chỉ yêu mỗi mình em"," ,"," %"," #"," <"," >"," :"," +"," ;"];
+const imageUrls = [ 'https://dulieublog2.github.io/img/blank.png' ];
+</script>
+<div id="player" style="display: none;"></div>
+<button id="muteButton">🔇</button>
+
+<script>
+  const youtubeURL = "https://www.youtube.com/watch?v=XAciTafsV8w";
+
+   function extractYouTubeID(url) {
+    const regex = /(?:youtube.com.*[?&]v=|youtu.be/)([^&]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : null;
+  }
+
+  const videoId = extractYouTubeID(youtubeURL);
+  let player;
+  let isMuted = false;
+
+  function onUserInteraction() {
+    if (typeof YT === 'undefined') {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    } else {
+      onYouTubeIframeAPIReady();
+    }
+
+    document.removeEventListener('click', onUserInteraction);
+    document.removeEventListener('touchstart', onUserInteraction);
+  }
+
+  document.addEventListener('click', onUserInteraction, { once: true });
+  document.addEventListener('touchstart', onUserInteraction, { once: true });
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '0',
+      width: '0',
+      videoId: videoId,
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        modestbranding: 1
+      },
+      events: {
+        'onReady': function (event) {
+          event.target.playVideo(); 
+          document.getElementById('muteButton').style.display = 'inline-block';
+        }
+      }
+    });
+  }
+
+  document.getElementById('muteButton').addEventListener('click', function () {
+    if (player) {
+      if (isMuted) {
+        player.unMute();
+        this.textContent = '🔇';
+      } else {
+        player.mute();
+        this.textContent = '🔊';
+      }
+      isMuted = !isMuted;
+    }
+  });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/nguoiyeucuatoi/love@main/chuchayjanshare2.js"></script>
+</body>
+</html>
